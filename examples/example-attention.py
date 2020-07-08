@@ -79,7 +79,7 @@ def main():
     class VisualiseAttentionMap(Callback):
 
         def on_epoch_end(self, epoch, logs=None):
-            attention_map = get_activations(model, x_test, layer_name='attention_weight')['attention_weight']
+            attention_map = get_activations(model, x_test, layer_names='attention_weight')['attention_weight']
 
             # top is attention map.
             # bottom is ground truth.
